@@ -10,7 +10,7 @@ import { useState } from 'react';
 function App() {
   const [activeName, setActiveName] = useState('')
 
-  const [stat1, setStat1] = useState(null)
+  const [stat1, setStat1] = useState('')
   const [stat2, setStat2] = useState('')
   const [stat3, setStat3] = useState('')
   const [stat4, setStat4] = useState('')
@@ -26,13 +26,16 @@ function App() {
         onChange={(e) => {setActiveName(e.target.value);
         resetForm() }}
       />
-                {DINOS.map(({ id, name, category, price, neutedPrice, nameStat1, nameStat2, nameStat3, nameStat4}) => 
+                {DINOS.map(({ id, name, category, price, neutedPrice, nameStat1, nameStat2, nameStat3, nameStat4 }) => 
                     activeName === name ? (
                     
                     <div key={id}>
-                        <Form 
-                          nameStat1={nameStat1}nameStat2={nameStat2}nameStat3={nameStat3}                          nameStat4={nameStat4}
+                        <Form
+                          nameStat1={nameStat1}nameStat2={nameStat2}nameStat3={nameStat3}nameStat4={nameStat4}
                           stat1={stat1}stat2={stat2}stat3={stat3}stat4={stat4}
+                          onChange={(e) => setStat1(e.target.value)}
+                          onChange2={(e) => setStat2(e.target.value)}
+
                         />
                         <div>
                         <DinoItem 

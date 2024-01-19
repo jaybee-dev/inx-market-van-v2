@@ -2,10 +2,10 @@
  * @param {string} id
  * @param {string} placeholder 
  * @param {number} value 
- * @param {n : number} onChange
+ * @param {(v: value) => void} onChange
  * @param {string} label 
  */
-export function Input ({id, placeholder, value, onChange, label}) {
+export function Input ({id, placeholder, defaultValue, onChange, label}) {
     return <div>
             <label className="floatingInput">{label}</label>
             <input
@@ -13,7 +13,7 @@ export function Input ({id, placeholder, value, onChange, label}) {
                 type="text"
                 className="form-control"
                 placeholder={placeholder}
-                value={value}
+                defaultValue={defaultValue}
                 onChange={onChange}
             />
         </div>
