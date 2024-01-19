@@ -1,17 +1,20 @@
 /**
+ * @param {string} id
  * @param {string} placeholder 
  * @param {number} value 
- * @param {event} onChange 
+ * @param {n : number} onChange
+ * @param {string} label 
  */
-export function Input ({placeholder, value, onChange, label}) {
+export function Input ({id, placeholder, value, onChange, label}) {
     return <div>
             <label className="floatingInput">{label}</label>
             <input
-                type="number"
+                id={id}
+                type="text"
                 className="form-control"
                 placeholder={placeholder}
                 value={value}
-                onChange={(e) => onChange(e.target.value)}
+                onChange={onChange}
             />
         </div>
 }

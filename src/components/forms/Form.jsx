@@ -1,12 +1,12 @@
 import { Input } from "./Input.jsx";
 
-export function Form ({nameStat1, nameStat2, nameStat3, nameStat4, stat1, stat2, stat3, stat4, setStat1, setStat2, setStat3, setStat4}) {
-    <div className='mb-3'>               
+export function Form ({nameStat1, nameStat2, nameStat3, nameStat4, stat1, stat2, stat3, stat4, onChange}) {
+    return <div className='mb-3'>               
     <Input
       id={'stat'+1} 
       label={nameStat1}
       placeholder={nameStat1}
-      onChange={(e) => setStat1(e.target.value)}
+      onChange={onChange}
       value={stat1}
     />
     {nameStat2 === '' ? null : 
@@ -14,7 +14,7 @@ export function Form ({nameStat1, nameStat2, nameStat3, nameStat4, stat1, stat2,
       id={'stat'+2} 
       label={nameStat2}
       placeholder={nameStat2}
-      onChange={(e) => setStat2(e.target.value)}
+      onChange={onChange}
       value={stat2}
     />}
     {nameStat3 === '' ? null : 
@@ -22,7 +22,7 @@ export function Form ({nameStat1, nameStat2, nameStat3, nameStat4, stat1, stat2,
       id={'stat'+3} 
       label={nameStat3}
       placeholder={nameStat3}
-      onChange={(e) => setStat3(e.target.value)}
+      onChange={onChange}
       value={stat3}
     />}
     {nameStat4 === '' ? null : 
@@ -30,7 +30,7 @@ export function Form ({nameStat1, nameStat2, nameStat3, nameStat4, stat1, stat2,
       id={'stat'+4}
       label={nameStat4} 
       placeholder={nameStat4} 
-      onChange={(e) => setStat4(e.target.value)}
+      onChange={onChange}
       value={stat4}
     />}
     </div>

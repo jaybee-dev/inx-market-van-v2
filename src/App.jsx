@@ -10,7 +10,7 @@ import { useState } from 'react';
 function App() {
   const [activeName, setActiveName] = useState('')
 
-  const [stat1, setStat1] = useState('')
+  const [stat1, setStat1] = useState(null)
   const [stat2, setStat2] = useState('')
   const [stat3, setStat3] = useState('')
   const [stat4, setStat4] = useState('')
@@ -18,7 +18,7 @@ function App() {
   function resetForm() {setStat1(''); setStat2(''); setStat3(''); setStat4('')}
 
   return <div className='container my-3'>
-      <h1 className='h1'>CALCULATEUR</h1>
+      <h1 className='h1'>CALCULATEUR PRIX DINOS VANILLA</h1>
       <div className='mb-3'>
 
       <Select
@@ -31,52 +31,9 @@ function App() {
                     
                     <div key={id}>
                         <Form 
-                          nameStat1={nameStat1}
-                          nameStat2={nameStat2}
-                          nameStat3={nameStat3}
-                          nameStat4={nameStat4}
-                          stat1={stat1}
-                          stat2={stat2}
-                          stat3={stat3}
-                          stat4={stat4}
-                          setStat1={setStat1}
-                          setStat2={setStat2}
-                          setStat3={setStat3}
-                          setStat4={setStat4}
-                        /> 
-                        {/* <div className='mb-3'>               
-                        <Input
-                          id={'stat'+1} 
-                          label={nameStat1}
-                          placeholder={nameStat1}
-                          onChange={(e) => setStat1(e.target.value)}
-                          value={stat1}
+                          nameStat1={nameStat1}nameStat2={nameStat2}nameStat3={nameStat3}                          nameStat4={nameStat4}
+                          stat1={stat1}stat2={stat2}stat3={stat3}stat4={stat4}
                         />
-                        {nameStat2 === '' ? null : 
-                        <Input
-                          id={'stat'+2} 
-                          label={nameStat2}
-                          placeholder={nameStat2}
-                          onChange={(e) => setStat2(e.target.value)}
-                          value={stat2}
-                        />}
-                        {nameStat3 === '' ? null : 
-                        <Input
-                          id={'stat'+3} 
-                          label={nameStat3}
-                          placeholder={nameStat3}
-                          onChange={(e) => setStat3(e.target.value)}
-                          value={stat3}
-                        />}
-                        {nameStat4 === '' ? null : 
-                        <Input
-                          id={'stat'+4}
-                          label={nameStat4} 
-                          placeholder={nameStat4} 
-                          onChange={(e) => setStat4(e.target.value)}
-                          value={stat4}
-                        />}
-                        </div> */}
                         <div>
                         <DinoItem 
                           name={name}
@@ -88,8 +45,6 @@ function App() {
                     </div>
                 ) : null 
                 )}
-
-
         </div>
     </div>
 }
