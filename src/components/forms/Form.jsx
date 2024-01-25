@@ -1,42 +1,44 @@
-import { Input } from "./Input.jsx";
+import Input from "./Input.jsx";
 
 /**
- * 
- * @param {string} nameStat1 
- * @returns 
+ * @param {string} nameStat1
  */
-export function Form ({nameStat1, nameStat2, nameStat3, nameStat4, stat1, stat2, stat3, stat4, onChange, onChange2}) {
-    return <div className='mb-3'>               
-    <Input
-      id={'stat'+1} 
-      label={nameStat1}
-      placeholder={nameStat1}
-      onChange={onChange}
-      defaultValue={stat1}
-    />
-    {nameStat2 === '' ? null : 
-    <Input
-      id={'stat'+2} 
-      label={nameStat2}
-      placeholder={nameStat2}
-      onChange={onChange2}
-      defaultValue={stat2}
-    />}
-    {nameStat3 === '' ? null : 
-    <Input
-      id={'stat'+3} 
-      label={nameStat3}
-      placeholder={nameStat3}
-      onChange={onChange}
-      value={stat3}
-    />}
-    {nameStat4 === '' ? null : 
-    <Input
-      id={'stat'+4}
-      label={nameStat4} 
-      placeholder={nameStat4} 
-      onChange={onChange}
-      value={stat4}
-    />}
+
+// Faire une fonction qui liste le nombre de statistiques qui ne sont pas null ou '' et afficher le nombre d'Input en conséquence
+
+export default function Form({ dino, setStat1, setStat2, setStat3, setStat4 }) {
+  return (
+    <div className="container">
+      <Input
+        label={dino.nameStat1}
+        value={dino.stat1}
+        placeholder={dino.nameStat1}
+        onChange={setStat1}
+      />
+      {dino.nameStat2 === "" ? null : (
+        <Input
+          label={dino.nameStat2}
+          value={dino.stat2}
+          placeholder={dino.nameStat2}
+          onChange={setStat2}
+        />
+      )}
+      {dino.nameStat3 === "" ? null : (
+        <Input
+          label={dino.nameStat3}
+          value={dino.stat3}
+          placeholder={dino.nameStat3}
+          onChange={setStat3}
+        />
+      )}
+      {dino.nameStat4 === "" ? null : (
+        <Input
+          label={dino.nameStat4}
+          value={dino.stat4}
+          placeholder={dino.nameStat4}
+          onChange={setStat4}
+        />
+      )}
     </div>
+  );
 }
