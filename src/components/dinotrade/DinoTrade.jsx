@@ -21,13 +21,6 @@ export default function DinoTrade() {
     setStat4("");
   }
 
-  function onChange({ a, b, c, d }) {
-    setStat1(a.target.value);
-    setStat2(b.target.value);
-    setStat3(c.target.value);
-    setStat4(d.target.value);
-  }
-
   return (
     <div className="container">
       <div className="">
