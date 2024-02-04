@@ -1,4 +1,5 @@
 import ThemeSwitcher from "./widgets/ThemeSwitcher";
+import logo from "../assets/logo-inx.png"
 
 /**
  *
@@ -6,13 +7,11 @@ import ThemeSwitcher from "./widgets/ThemeSwitcher";
  */
 export default function Header() {
   return (
-    <div className="container-fluid bg-body">
-      <div className="row">
-        <h1 className="display-1 text-dark">HEADER</h1>
-        <div className="position-relative">
+      <div className="h-20 flex justify-between bg-zinc-100 text-zinc-800 px-2">
+        <img className="h-12 max-sm:h-6 place-self-center" src={logo} alt="logo"/>
+        <div className="flex-none place-self-center">
           <ThemeSwitcher />
         </div>
       </div>
-    </div>
   );
 }

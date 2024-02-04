@@ -1,8 +1,9 @@
-import ShowDinoPrice from "./ShowDinoPrice.jsx";
-import Select from "../forms/Select.jsx";
-import Form from "../forms/Form.jsx";
+import Select from "../../forms/Select.jsx";
+import Form from "../../forms/Form.jsx";
 
-import { DINOS } from "../../datas/DINOS.js";
+import ShowDinoPrice from "./ShowDinoPrice.jsx";
+
+import { DINOS } from "../../../datas/DINOS.js";
 
 import { useState } from "react";
 
@@ -22,9 +23,11 @@ export default function DinoTrade() {
   }
 
   return (
-    <div className="container">
+    <div className="">
       <div className="">
         <Select
+          data={DINOS}
+          selectName='Choose dino'
           activeName={activeName}
           onChange={(e) => {
             setActiveName(e.target.value);
@@ -42,10 +45,12 @@ export default function DinoTrade() {
                 setStat3={(e) => setStat3(e.target.value)}
                 setStat4={(e) => setStat4(e.target.value)}
               />
-              <div>
-                <ShowDinoPrice
+               <div>
+                <ShowDinoPrice                
                   name={dino.name}
                   category={dino.category}
+
+                  // add ternary operator ; if nameStat1 === '', only show prices
                   price={
                     Math.round(
                       (dino.price * (Math.round(stat1) / 80) +
@@ -64,8 +69,9 @@ export default function DinoTrade() {
                         100
                     ) * 100
                   }
+
                 />
-              </div>
+               </div>
             </div>
           ) : null
         )}

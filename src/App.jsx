@@ -1,21 +1,29 @@
+import { Routes, Route } from "react-router-dom";
+
 import Header from "./components/Header.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Pannel from "./components/Pannel.jsx";
-import DinoTrade from "./components/dinotrade/DinoTrade.jsx";
 import Footer from "./components/Footer.jsx";
-import { Routes, Route } from "react-router-dom";
-import StuffTrade from "./components/stufftrade/StuffTrade.jsx";
+
+import DinoTrade from "./components/pages/dinos/DinoTrade.jsx";
+import ItemTrade from "./components/pages/items/ItemTrade.jsx";
+import SaddleTrade from "./components/pages/saddles/SaddleTrade.jsx";
+import TekTrade from "./components/pages/tek/TekTrade.jsx";
+import BossTrade from "./components/pages/bosses/BossTrade.jsx";
 
 export default function App() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
       <Navbar />
       <Pannel />
       {/* Start routes */}
       <Routes>
         <Route path="dinos" element={<DinoTrade />} />
-        <Route path="stuff" element={<StuffTrade />} />
+        <Route path="items" element={<ItemTrade />} />
+        <Route path="saddles" element={<SaddleTrade />} />
+        <Route path="tek" element={<TekTrade />} />
+        <Route path="bosses" element={<BossTrade />} />
       </Routes>
       {/* End routes */}
       <Footer />

@@ -2,17 +2,17 @@
  * @param {string} id
  * @param {string} placeholder
  * @param {number} value
- * @param {(v: value) => void} onChange
+ * @param {(n: number) => void} onChange
  * @param {string} label
  */
 export default function Input({ id, placeholder, value, onChange, label }) {
   return (
-    <div className="input-group-sm">
-      <label className="floatingInput text-warning">{label}</label>
+    <div className="grid grid-flow-col auto-cols-max place-items-center place-content-center gap-2">
+      <label className="w-20 text-right">{label}</label>
       <input
         id={id}
-        type="text"
-        className="form-control"
+        type="number"
+        className="rounded w-20 h-8 text-center m-1 text-zinc-800 text-xl"
         placeholder={placeholder}
         value={value}
         onChange={onChange}

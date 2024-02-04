@@ -1,14 +1,13 @@
 export default function Switch() {
   return (
-    <div className="form-check form-switch">
-      <input
+    <div className="relative w-20">
+      <label className="absolute w-full h-10 rounded">
+        <input 
         type="checkbox"
-        className="form-check-input"
-        id="theme-switch"
+        className="absolute hidden"
         role="switch"
       />
-      <label className="form-check-label text-dark" htmlFor="theme-switch">
-        DARK MODE
+      <span className="absolute w-full h-full rounded"></span>
       </label>
     </div>
   );
