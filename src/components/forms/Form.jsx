@@ -1,12 +1,12 @@
 import Input from "./Input.jsx";
-import stat_dmg from "../../assets/stat_dmg.webp"
-import stat_health from "../../assets/stat_health.webp"
-import stat_stam from "../../assets/stat_stam.webp"
-import stat_weight from "../../assets/stat_weight.webp"
-import stat_food from "../../assets/stat_food.webp"
-import stat_oxy from "../../assets/stat_oxy.webp"
-import stat_charge from "../../assets/stat_charge.webp"
-import stat_useful from "../../assets/stat_useful.png"
+import stat_dmg from "../../assets/images/stat_dmg.webp"
+import stat_health from "../../assets/images/stat_health.webp"
+import stat_stam from "../../assets/images/stat_stam.webp"
+import stat_weight from "../../assets/images/stat_weight.webp"
+import stat_food from "../../assets/images/stat_food.webp"
+import stat_oxy from "../../assets/images/stat_oxy.webp"
+import stat_charge from "../../assets/images/stat_charge.webp"
+import stat_useful from "../../assets/images/stat_useful.png"
 
 
 /**

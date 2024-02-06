@@ -1,5 +1,5 @@
 import ThemeSwitcher from "./widgets/ThemeSwitcher";
-import logo from "../assets/logo-inx.png"
+import logo from "../assets/images/logo-inx.png"
 
 /**
  *

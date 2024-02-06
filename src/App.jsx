@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
+import { useTranslation, initReactI18next } from 'react-i18next';
 
 import Header from "./components/Header.jsx";
 import Navbar from "./components/Navbar.jsx";
-import Pannel from "./components/Pannel.jsx";
 import Footer from "./components/Footer.jsx";
 
 import DinoTrade from "./components/pages/dinos/DinoTrade.jsx";
@@ -12,11 +12,13 @@ import TekTrade from "./components/pages/tek/TekTrade.jsx";
 import BossTrade from "./components/pages/bosses/BossTrade.jsx";
 
 export default function App() {
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
       <Navbar />
-      <Pannel />
+      {/* <Pannel /> */}
       {/* Start routes */}
       <Routes>
         <Route path="dinos" element={<DinoTrade />} />

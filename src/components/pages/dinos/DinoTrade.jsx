@@ -6,6 +6,7 @@ import ShowDinoPrice from "./ShowDinoPrice.jsx";
 import { DINOS } from "../../../datas/DINOS.js";
 
 import { useState } from "react";
+import Pannel from "../../Pannel.jsx";
 
 export default function DinoTrade() {
   const [activeName, setActiveName] = useState("");
@@ -24,6 +25,9 @@ export default function DinoTrade() {
 
   return (
     <div className="">
+      <Pannel 
+      title='dino trading'
+      infos='Renseignez les stats demandées'/>
       <div className="">
         <Select
           data={DINOS}
