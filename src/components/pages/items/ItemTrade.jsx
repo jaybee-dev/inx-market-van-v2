@@ -1,4 +1,5 @@
 import Select from "../../forms/Select.jsx";
+import Pannel from "../../Pannel.jsx";
 
 import { ITEMS } from "../../../datas/ITEMS.js";
 
@@ -9,7 +10,10 @@ export default function ItemTrade() {
   const [activeName, setActiveName] = useState("");
 
   return (
-    <div className="">
+    <div>
+      <Pannel 
+        title='item trading'
+        infos='Choisissez votre item'/>
       <div className="">
         <Select
             data={ITEMS}

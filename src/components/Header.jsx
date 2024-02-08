@@ -7,9 +7,10 @@ import logo from "../assets/images/logo-inx.png"
  */
 export default function Header() {
   return (
-      <div className="h-20 flex justify-between bg-zinc-100 text-zinc-800 px-2">
-        <img className="h-12 max-sm:h-6 place-self-center" src={logo} alt="logo"/>
-        <div className="flex-none place-self-center">
+      <div className="flex justify-between bg-header items-center">
+        <img className="max-h-[80%]" src={logo} alt="logo"/>
+        <div></div>
+        <div className="">
           <ThemeSwitcher />
         </div>
       </div>

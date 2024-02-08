@@ -1,6 +1,5 @@
 /**
  * @param {string} activeName
- * @param {*} onChange
  * @returns {Component}
  */
 export default function Select(props) {
@@ -10,9 +9,9 @@ export default function Select(props) {
   );
 
   return (
-    <div className="text-center mt-2">
+    <div className="text-center mt-2 ">
       <select
-        className="text-zinc-800 rounded text-center h-8"
+        className="rounded text-center w-40 h-6 bg-background border"
         value={props.activeName}
         onChange={props.onChange}
       >

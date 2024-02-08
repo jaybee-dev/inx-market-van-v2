@@ -8,6 +8,8 @@ import { DINOS } from "../../../datas/DINOS.js";
 import { useState } from "react";
 import Pannel from "../../Pannel.jsx";
 
+import {calcPrice} from "./functions/calcPrice.js";
+
 export default function DinoTrade() {
   const [activeName, setActiveName] = useState("");
 
@@ -24,11 +26,11 @@ export default function DinoTrade() {
   }
 
   return (
-    <div className="">
+    <div>
       <Pannel 
-      title='dino trading'
-      infos='Renseignez les stats demandées'/>
-      <div className="">
+        title='dino trading'
+        infos='Renseignez les stats demandées'/>
+      <div>
         <Select
           data={DINOS}
           selectName='Choose dino'
@@ -50,30 +52,12 @@ export default function DinoTrade() {
                 setStat4={(e) => setStat4(e.target.value)}
               />
                <div>
-                <ShowDinoPrice                
+                <ShowDinoPrice 
                   name={dino.name}
                   category={dino.category}
-
                   // add ternary operator ; if nameStat1 === '', only show prices
-                  price={
-                    Math.round(
-                      (dino.price * (Math.round(stat1) / 80) +
-                        dino.price * (Math.round(stat2) / 80) * 0.7 +
-                        dino.price * (Math.round(stat3) / 80) * 0.4 +
-                        dino.price * (Math.round(stat4) / 80) * 0.3) /
-                        100
-                    ) * 100
-                  }
-                  neutedPrice={
-                    Math.round(
-                      (dino.neutedPrice * (Math.round(stat1) / 80) +
-                        dino.neutedPrice * (Math.round(stat2) / 80) * 0.7 +
-                        dino.neutedPrice * (Math.round(stat3) / 80) * 0.4 +
-                        dino.neutedPrice * (Math.round(stat4) / 80) * 0.3) /
-                        100
-                    ) * 100
-                  }
-
+                  price={calcPrice(dino.price, stat1, stat2, stat3, stat4)}
+                  neutedPrice={calcPrice(dino.neutedPrice, stat1, stat2, stat3, stat4)}
                 />
                </div>
             </div>

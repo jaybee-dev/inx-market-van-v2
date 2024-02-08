@@ -1,14 +1,11 @@
 export default function Switch() {
   return (
-    <div className="relative w-20">
-      <label className="absolute w-full h-10 rounded">
-        <input 
+    <div className="">
+      <input 
         type="checkbox"
-        className="absolute hidden"
+        className="m-2"
         role="switch"
       />
-      <span className="absolute w-full h-full rounded"></span>
-      </label>
     </div>
   );
 }

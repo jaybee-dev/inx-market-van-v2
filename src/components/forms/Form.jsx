@@ -1,12 +1,12 @@
 import Input from "./Input.jsx";
-import stat_dmg from "../../assets/images/stat_dmg.webp"
-import stat_health from "../../assets/images/stat_health.webp"
-import stat_stam from "../../assets/images/stat_stam.webp"
-import stat_weight from "../../assets/images/stat_weight.webp"
-import stat_food from "../../assets/images/stat_food.webp"
-import stat_oxy from "../../assets/images/stat_oxy.webp"
-import stat_charge from "../../assets/images/stat_charge.webp"
-import stat_useful from "../../assets/images/stat_useful.png"
+import stat_dmg from "../../assets/images/stat_dmg_black.webp"
+import stat_health from "../../assets/images/stat_health_black.webp"
+import stat_stam from "../../assets/images/stat_stam_black.webp"
+import stat_weight from "../../assets/images/stat_weight_black.webp"
+import stat_food from "../../assets/images/stat_food_black.webp"
+import stat_oxy from "../../assets/images/stat_oxy_black.webp"
+import stat_charge from "../../assets/images/stat_charge_black.webp"
+import stat_useful from "../../assets/images/stat_useful_black.webp"
 
 
 /**
@@ -16,12 +16,12 @@ import stat_useful from "../../assets/images/stat_useful.png"
 // Faire une fonction qui liste le nombre de statistiques qui ne sont pas null ou '' et afficher le nombre d'Input en conséquence
 
 const statsIco = {stat_dmg, stat_health, stat_stam, stat_weight, stat_food, stat_oxy, stat_charge, stat_useful}
-const ico = "w-6 h-6 text-center m-2"
-const statItem = "flex place-content-center"
+const ico = "w-8 h-8 m-2 dark:invert"
+const statItem = "flex justify-center items-center bg-success my-2"
 
 export default function Form({ dino, setStat1, setStat2, setStat3, setStat4 }) {
   return (
-    <div className="text-center p-2">
+    <div className="bg-info p-4 rounded">
       {dino.nameStat1 === '' ? null : (
       <div className={statItem}>
         <img className={ico} alt={dino.nameStat1} src={statsIco[dino.nameStat1]}/>

@@ -15,11 +15,11 @@ export default function App() {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className=" bg-background text-text grid grid-rows-main min-h-screen">
       <Header />
       <Navbar />
-      {/* <Pannel /> */}
       {/* Start routes */}
+      <div>
       <Routes>
         <Route path="dinos" element={<DinoTrade />} />
         <Route path="items" element={<ItemTrade />} />
@@ -27,6 +27,7 @@ export default function App() {
         <Route path="tek" element={<TekTrade />} />
         <Route path="bosses" element={<BossTrade />} />
       </Routes>
+      </div>
       {/* End routes */}
       <Footer />
     </div>
