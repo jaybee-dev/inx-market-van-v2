@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import { useTranslation, initReactI18next } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
+import { i18n } from "../i18n.js/";
 
 import Header from "./components/Header.jsx";
 import Navbar from "./components/Navbar.jsx";
