@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { useTranslation, initReactI18next } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 import Header from "./components/Header.jsx";
 import Navbar from "./components/Navbar.jsx";
@@ -10,26 +10,34 @@ import ItemTrade from "./components/pages/items/ItemTrade.jsx";
 import SaddleTrade from "./components/pages/saddles/SaddleTrade.jsx";
 import TekTrade from "./components/pages/tek/TekTrade.jsx";
 import BossTrade from "./components/pages/bosses/BossTrade.jsx";
+import { useState } from "react";
 
 export default function App() {
-  const { t } = useTranslation();
+  const [isDark, setIsDark] = useState(false)
+  const {t}=useTranslation()
 
   return (
-    <div className=" bg-background text-text grid grid-rows-main min-h-screen">
-      <Header />
-      <Navbar />
-      {/* Start routes */}
-      <div>
-      <Routes>
-        <Route path="dinos" element={<DinoTrade />} />
-        <Route path="items" element={<ItemTrade />} />
-        <Route path="saddles" element={<SaddleTrade />} />
-        <Route path="tek" element={<TekTrade />} />
-        <Route path="bosses" element={<BossTrade />} />
-      </Routes>
+    <div id='main' className={isDark ? 'dark' : ''}>
+        <div className="bg-background text-text grid grid-rows-main min-h-screen">
+        <Header
+          isChecked={isDark}
+          handleChange={() => setIsDark(!isDark)}/>{t('language')}
+        <Navbar />
+        {/* Start routes */}
+        <div>
+        <Routes>
+          <Route path="dinos" element={<DinoTrade />} />
+          <Route path="items" element={<ItemTrade />} />
+          <Route path="saddles" element={<SaddleTrade />} />
+          <Route path="tek" element={<TekTrade />} />
+          <Route path="bosses" element={<BossTrade />} />
+        </Routes>
+        </div>
+        {/* End routes */}
+        <Footer />
       </div>
-      {/* End routes */}
-      <Footer />
     </div>
   );
 }
+
+

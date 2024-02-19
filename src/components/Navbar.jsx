@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const liClass = "hover:text-accent uppercase ease-in-out duration-300 text-xl max-sm:text-base w-20 rounded text-center text-secondary"
+const liClass = "hover:text-secondary uppercase ease-in-out duration-300 text-xl max-sm:text-base w-20 rounded text-center text-text"
 
 /**
  *

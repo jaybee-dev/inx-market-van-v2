@@ -29,7 +29,6 @@ export default function ItemTrade() {
               <div>
                 <ShowItem
                   name={item.name}
-                  type={item.category}
                   amount={item.amount}
                   details={item.details}
                   price={item.price}

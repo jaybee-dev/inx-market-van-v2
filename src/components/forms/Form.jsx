@@ -16,12 +16,14 @@ import stat_useful from "../../assets/images/stat_useful_black.webp"
 // Faire une fonction qui liste le nombre de statistiques qui ne sont pas null ou '' et afficher le nombre d'Input en conséquence
 
 const statsIco = {stat_dmg, stat_health, stat_stam, stat_weight, stat_food, stat_oxy, stat_charge, stat_useful}
-const ico = "w-8 h-8 m-2 dark:invert"
-const statItem = "flex justify-center items-center bg-success my-2"
+const ico = "w-8 h-8 m-2 dark:invert justify-self-center col-start-1 col-end-3"
+const statItem = "grid grid-cols-8 justify-center items-center my-px mx-auto w-72 bg-secondary h-14 rounded-sm"
+// const statItem = "flex justify-center items-center my-px mx-auto w-72 bg-secondary h-14 rounded-sm"
+
 
 export default function Form({ dino, setStat1, setStat2, setStat3, setStat4 }) {
   return (
-    <div className="bg-info p-4 rounded">
+    <div className="">
       {dino.nameStat1 === '' ? null : (
       <div className={statItem}>
         <img className={ico} alt={dino.nameStat1} src={statsIco[dino.nameStat1]}/>

@@ -1,8 +1,22 @@
-# React + Vite
+# PROJECT NAME
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+INX Market (vanilla version) 
 
-Currently, two official plugins are available:
+## SMALL DESCRIPTION
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a a small app facilitating the final price calculations of the products and oriented towards the user experience.
+Made for INX Gaming Servers, on the game `ARK : Survival Evolded` & `ARK : Survival Ascended` (Cluster 1)
+
+### `Features`
+
+Anyone can easily calculate the cost of a dino based on their own stats.
+No mistakes, this app does it all for you :)
+
+### `Technologys`
+
+I use `React` as main framework, and `Tailwind` for style.
+
+### `Links`
+
+[INX Website](https://inxserv.fr/) | 
+[INX Discord](https://discord.gg/9Fs6Qhx)

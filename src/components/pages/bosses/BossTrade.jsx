@@ -30,6 +30,7 @@ export default function BossTrade() {
                 <ShowBoss
                   name={boss.name}
                   map={boss.map}
+                  image={boss.image}
                   priceGamma={boss.priceGamma}
                   priceBeta={boss.priceBeta}
                   priceAlpha={boss.priceAlpha}

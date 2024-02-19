@@ -8,12 +8,18 @@ export default {
     "./src/**/*.{html,jsx}",
   ],
   theme: {
+    borderRadius: {
+      'DEFAULT': '0.125rem',
+      'sm': '0.15rem',
+      'full': '100%',
+      'switch': '1em'
+    },
     extend: {
       gridTemplateRows: {
-        'main': 'auto auto 1fr auto',
+        'main': 'auto auto auto 1fr auto',
       },
       gridTemplateColumns: {
-        'header': '10% 10%'
+        'header': '1fr auto auto'
       }
     },
 
@@ -35,9 +41,13 @@ export default {
       'success': 'var(--success)',
       'info': 'var(--info)',
       'primary-tr': 'var(--primary-tr)',
+      'swstart': 'var(--swstart)',
+      'swend': 'var(--swend)',
      },  
 
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 }
 

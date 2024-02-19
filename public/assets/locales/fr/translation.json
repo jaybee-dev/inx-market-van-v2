@@ -1,5 +1,5 @@
 {
-    "language": "Français (src)",
+    "language": "Français (public)",
 
     "pannel_title": "CALCULATEUR PRIX DINOS",
     "pannel_instructions": "Choisissez votre dino et renseignez les stats demandées",
@@ -21,10 +21,6 @@
     "stat_oxy": "Oxygène",
     "stat_charge": "Capacité de Charge",
     "stat_useful": "Stat la plus utile",
-
-    "show_amount": "Quantité",
-    "show_details": "Caractéristiques",
-    "show_price": "Prix",
 
     "name_amar": "Amargasaurus",
     "name_andrew": "Andrewsarchus",

@@ -16,6 +16,9 @@
 
       --primary-tr: rgba(240, 124, 0, 0.253);
 
+      --swstart: #ffcc89;
+      --swend: #d8860b;
+
     }
     .dark {
       --text: #f2f0ed;
@@ -29,6 +32,10 @@
       --info: #167ad8;
 
       --primary-tr: rgba(255, 132, 0, 0.842);
+
+      --swstart: #777;
+      --swend: #3a3a3a;
+
 
     }
     .ark {

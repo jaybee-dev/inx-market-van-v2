@@ -9,9 +9,9 @@ export default function Select(props) {
   );
 
   return (
-    <div className="text-center mt-2 ">
+    <div className="text-center m-2">
       <select
-        className="rounded text-center w-40 h-6 bg-background border"
+        className="rounded text-center w-72 h-8 bg-background border uppercase"
         value={props.activeName}
         onChange={props.onChange}
       >
