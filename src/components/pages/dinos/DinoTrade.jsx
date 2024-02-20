@@ -9,8 +9,11 @@ import { useState } from "react";
 import Pannel from "../../Pannel.jsx";
 
 import {calcPrice} from "./functions/calcPrice.js";
+import { useTranslation } from "react-i18next";
 
 export default function DinoTrade() {
+  const { t } = useTranslation()
+
   const [activeName, setActiveName] = useState("");
 
   const [stat1, setStat1] = useState("");
@@ -28,12 +31,12 @@ export default function DinoTrade() {
   return (
     <div>
       <Pannel 
-        title='dino trading'
-        infos='Renseignez les stats demandées'/>
+        title={t('pannel_title_dinos')}
+        infos={t('pannel_info_dinos')}/>
       <div>
         <Select
           data={DINOS}
-          selectName='Choose dino'
+          selectName={t('choose_dino')}
           activeName={activeName}
           onChange={(e) => {
             setActiveName(e.target.value);
@@ -53,7 +56,6 @@ export default function DinoTrade() {
               />
                <div>
                 <ShowDinoPrice 
-                  name={dino.name}
                   category={dino.category}
                   // add ternary operator ; if nameStat1 === '', only show prices
                   price={calcPrice(dino.price, stat1, stat2, stat3, stat4)}

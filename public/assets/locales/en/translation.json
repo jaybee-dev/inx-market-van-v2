@@ -1,17 +1,28 @@
 {
     "language": "English",
 
-    "pannel_title": "DINOS PRICES CALCULATOR",
-    "pannel_instructions" : "Choose your dino and fill in the requested stats",
-    "pannel_rules": "",
+    "pannel_title_dinos": "DINOS TRADING",
+    "pannel_info_dinos" : "Choose your dino and fill in the requested stats",
+    "pannel_title_items": "ITEMS TRADING",
+    "pannel_info_items" : "Choose your item to show the prices",
+    "pannel_title_saddles": "SADDLES TRADING",
+    "pannel_info_saddles" : "Choose your saddle to show the prices",
+    "pannel_title_tek": "TEK TRADING",
+    "pannel_info_tek" : "Choose your Tek item to show the prices",
+    "pannel_title_bosses": "BOSSES TRADING",
+    "pannel_info_bosses" : "Choose a boss to show the price",
 
     "unique_price": "Unique price",
 
     "dinoitem_category": "Category",
-    "dinoitem_breedable": "Not neutered",
-    "dinoitem_neuted": "Neutered",
+    "dinoitem_breedable": "Not spayed",
+    "dinoitem_neuted": "Spayed",
 
-    "choose_dino": "Choose your dino",
+    "choose_dino": "Choose a dino",
+    "choose_item": "Choose an item",
+    "choose_saddle": "Choose a saddle",
+    "choose_tek": "Choose a Tek item",
+    "choose_boss": "Choose a boss",
 
     "stat_dmg": "Damage",
     "stat_stam": "Stamina",
@@ -92,5 +103,10 @@
     "name_wyv": "Wyvern (no lightning)",
     "name_wyv_light": "Lightning Wyvern",
     "name_yuty": "Yutyrannus",
-    "name_other": "Other dino"
+    "name_other": "Other dino",
+
+    "array_title_amount": "Amount",
+    "array_title_details": "Details",
+    "array_title_price": "Price"
+
 }

@@ -7,6 +7,7 @@ import stat_food from "../../assets/images/stat_food_black.webp"
 import stat_oxy from "../../assets/images/stat_oxy_black.webp"
 import stat_charge from "../../assets/images/stat_charge_black.webp"
 import stat_useful from "../../assets/images/stat_useful_black.webp"
+import { useTranslation } from "react-i18next";
 
 
 /**
@@ -18,19 +19,18 @@ import stat_useful from "../../assets/images/stat_useful_black.webp"
 const statsIco = {stat_dmg, stat_health, stat_stam, stat_weight, stat_food, stat_oxy, stat_charge, stat_useful}
 const ico = "w-8 h-8 m-2 dark:invert justify-self-center col-start-1 col-end-3"
 const statItem = "grid grid-cols-8 justify-center items-center my-px mx-auto w-72 bg-secondary h-14 rounded-sm"
-// const statItem = "flex justify-center items-center my-px mx-auto w-72 bg-secondary h-14 rounded-sm"
-
 
 export default function Form({ dino, setStat1, setStat2, setStat3, setStat4 }) {
+  const { t } = useTranslation()
   return (
-    <div className="">
+    <div>
       {dino.nameStat1 === '' ? null : (
       <div className={statItem}>
         <img className={ico} alt={dino.nameStat1} src={statsIco[dino.nameStat1]}/>
         <Input
-          label={dino.nameStat1}
+          label={t(dino.nameStat1)}
           value={dino.stat1}
-          placeholder={dino.nameStat1}
+          placeholder={t(dino.nameStat1)}
           onChange={setStat1}
         />
       </div>
@@ -39,9 +39,9 @@ export default function Form({ dino, setStat1, setStat2, setStat3, setStat4 }) {
         <div className={statItem}>
           <img className={ico} alt={dino.nameStat2} src={statsIco[dino.nameStat2]}/>
           <Input
-            label={dino.nameStat2}
+            label={t(dino.nameStat2)}
             value={dino.stat2}
-            placeholder={dino.nameStat2}
+            placeholder={t(dino.nameStat2)}
             onChange={setStat2}
         />
         </div>
@@ -50,9 +50,9 @@ export default function Form({ dino, setStat1, setStat2, setStat3, setStat4 }) {
         <div className={statItem}>
           <img className={ico} alt={dino.nameStat3} src={statsIco[dino.nameStat3]}/>
           <Input
-            label={dino.nameStat3}
+            label={t(dino.nameStat3)}
             value={dino.stat3}
-            placeholder={dino.nameStat3}
+            placeholder={t(dino.nameStat3)}
             onChange={setStat3}
           />
         </div>
@@ -61,9 +61,9 @@ export default function Form({ dino, setStat1, setStat2, setStat3, setStat4 }) {
         <div className={statItem}>
           <img className={ico} alt={dino.nameStat4} src={statsIco[dino.nameStat4]}/>
           <Input
-            label={dino.nameStat4}
+            label={t(dino.nameStat4)}
             value={dino.stat4}
-            placeholder={dino.nameStat4}
+            placeholder={t(dino.nameStat4)}
             onChange={setStat4}
           />
         </div>

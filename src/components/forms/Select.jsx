@@ -1,8 +1,12 @@
+import { useTranslation } from "react-i18next";
+
 /**
  * @param {string} activeName
  * @returns {Component}
  */
 export default function Select(props) {
+  const { t } = useTranslation()
+
   const names = props.data.reduce(
     (acc, i) => (acc.includes(i.name) ? acc : acc.concat(i.name)),
     []
@@ -18,7 +22,7 @@ export default function Select(props) {
         <option value="">{props.selectName}</option>
         {names.map((cat) => (
           <option key={cat} value={cat}>
-            {cat}
+            {t(cat)}
           </option>
         ))}
       </select>

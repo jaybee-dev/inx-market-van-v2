@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import { useTranslation } from 'react-i18next';
 
 import Header from "./components/Header.jsx";
 import Navbar from "./components/Navbar.jsx";
@@ -14,14 +13,13 @@ import { useState } from "react";
 
 export default function App() {
   const [isDark, setIsDark] = useState(false)
-  const {t}=useTranslation()
 
   return (
     <div id='main' className={isDark ? 'dark' : ''}>
         <div className="bg-background text-text grid grid-rows-main min-h-screen">
         <Header
           isChecked={isDark}
-          handleChange={() => setIsDark(!isDark)}/>{t('language')}
+          handleChange={() => setIsDark(!isDark)}/>
         <Navbar />
         {/* Start routes */}
         <div>

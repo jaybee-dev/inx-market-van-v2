@@ -5,19 +5,21 @@ import { ITEMS } from "../../../datas/ITEMS.js";
 
 import { useState } from "react";
 import ShowItem from "./ShowItem.jsx";
+import { useTranslation } from "react-i18next";
 
 export default function ItemTrade() {
+  const { t } = useTranslation();
   const [activeName, setActiveName] = useState("");
 
   return (
     <div>
       <Pannel 
-        title='item trading'
-        infos='Choisissez votre item'/>
+        title={t('pannel_title_items')}
+        infos={t('pannel_info_items')}/>
       <div className="">
         <Select
             data={ITEMS}
-            selectName='Choose item'
+            selectName={t('choose_item')}
             activeName={activeName}
             onChange={(e) => {
                 setActiveName(e.target.value);
