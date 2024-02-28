@@ -1,15 +1,14 @@
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+
+import Pannel from "../../Pannel.jsx";
 import Select from "../../forms/Select.jsx";
 import Form from "../../forms/Form.jsx";
-
-import ShowDinoPrice from "./ShowDinoPrice.jsx";
+import ShowDino from "./ShowDino.jsx";
 
 import { DINOS } from "../../../datas/DINOS.js";
 
-import { useState } from "react";
-import Pannel from "../../Pannel.jsx";
-
 import {calcPrice} from "./functions/calcPrice.js";
-import { useTranslation } from "react-i18next";
 
 export default function DinoTrade() {
   const { t } = useTranslation()
@@ -54,18 +53,20 @@ export default function DinoTrade() {
                 setStat3={(e) => setStat3(e.target.value)}
                 setStat4={(e) => setStat4(e.target.value)}
               />
+              {dino.neutedPrice ? 
                <div>
-                <ShowDinoPrice 
+                <ShowDino 
                   category={dino.category}
-                  // add ternary operator ; if nameStat1 === '', only show prices
                   price={calcPrice(dino.price, stat1, stat2, stat3, stat4)}
                   neutedPrice={calcPrice(dino.neutedPrice, stat1, stat2, stat3, stat4)}
-                />
-               </div>
+                />             
+               </div> : 
+               <div className="text-center"><span>{t('unique_price')}: {dino.price}</span></div>
+              }
             </div>
           ) : null
         )}
       </div>
-    </div> // Last div
+    </div>
   );
 }

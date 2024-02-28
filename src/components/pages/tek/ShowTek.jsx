@@ -5,7 +5,7 @@ export default function ShowTek(props) {
   return (
       <div className="flex flex-col place-items-center">
         {/* <h2 className="text-xl uppercase">{props.name}</h2> */}
-        <div className="bg-header p-1 rounded-sm shadow-xl">
+        <div className="bg-header p-0.5 rounded-sm shadow-xl dark:shadow-wxl">
           <table className="text-center min-w-72">
             <thead>
               <tr className="bg-accent">

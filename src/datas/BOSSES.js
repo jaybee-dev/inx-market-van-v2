@@ -1,11 +1,11 @@
-import broodmother from '../assets/images/bosses/boss_broodmother.webp'
+// import broodmother from '../assets/images/bosses/boss_broodmother.webp'
 
 export const BOSSES = [
 
 	{
         id: 'boss_brood',
         name: 'Broodmother',
-        image: broodmother,
+        image: 'broodmother',
         map: 'The Island',
         priceGamma: 800,
         priceBeta: 1500,
@@ -15,7 +15,7 @@ export const BOSSES = [
 	{
         id: 'boss_mega',
         name: 'Megapithecus',
-        image: 'https://ark.fandom.com/fr/wiki/M%C3%A9gapith%C3%A8que#/media/Fichier:Dossier_Megapithecus.png',
+        image: 'megapithecus',
         map: 'The Island',
         priceGamma: 800,
         priceBeta: 1500,
@@ -25,6 +25,7 @@ export const BOSSES = [
 	{
         id: 'boss_drake',
         name: 'Dragon',
+        image: 'dragon',
         map: 'The Island',
         priceGamma: 1000,
         priceBeta: 2000,
@@ -34,6 +35,7 @@ export const BOSSES = [
         {
         id: 'boss_overseer',
         name: 'Overseer (Cave Tek)',
+        image: 'overseer',
         map: 'The Island',
         priceGamma: 2000,
         priceBeta: 4000,
@@ -43,6 +45,7 @@ export const BOSSES = [
         {
         id: 'boss_manticore',
         name: 'Manticore',
+        image: 'manticore',
         map: 'Scorched Earth',
         priceGamma: 800,
         priceBeta: 1500,
@@ -52,6 +55,7 @@ export const BOSSES = [
         {
         id: 'boss_rockwell',
         name: 'Rockwell',
+        image: 'rockwell',
         map: 'Aberration',
         priceGamma: 800,
         priceBeta: 1500,
@@ -61,6 +65,7 @@ export const BOSSES = [
         {
         id: 'boss_forest',
         name: 'Titan Forest',
+        image: 'forest',
         map: 'Extinction',
         priceGamma: 1000,
         priceBeta: 2000,
@@ -70,6 +75,7 @@ export const BOSSES = [
         {
         id: 'boss_desert',
         name: 'Titan Desert',
+        image: 'desert',
         map: 'Extinction',
         priceGamma: 1000,
         priceBeta: 2000,
@@ -79,6 +85,7 @@ export const BOSSES = [
         {
         id: 'boss_ice',
         name: 'Titan Ice',
+        image: 'ice',
         map: 'Extinction',
         priceGamma: 1000,
         priceBeta: 2000,
@@ -88,6 +95,7 @@ export const BOSSES = [
         {
         id: 'boss_king',
         name: 'King Titan',
+        image: 'king',
         map: 'Extinction',
         priceGamma: 4000,
         priceBeta: 6000,

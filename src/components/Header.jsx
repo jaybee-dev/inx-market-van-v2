@@ -1,5 +1,5 @@
 import LngSelector from "./widgets/LngSelector.jsx";
-import logo from "../assets/images/logo-inx.png"
+import logo from "../assets/images/common/logo-inx.png"
 import Switch from "./forms/Switch.jsx";
 
 /**

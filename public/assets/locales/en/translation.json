@@ -1,6 +1,12 @@
 {
     "language": "English",
 
+    "nav_dinos": "Dinos",
+    "nav_items": "Items",
+    "nav_saddles": "Saddles",
+    "nav_tek": "Tek",
+    "nav_bosses": "Bosses",
+
     "pannel_title_dinos": "DINOS TRADING",
     "pannel_info_dinos" : "Choose your dino and fill in the requested stats",
     "pannel_title_items": "ITEMS TRADING",
@@ -105,6 +111,27 @@
     "name_yuty": "Yutyrannus",
     "name_other": "Other dino",
 
+    "item_armor": "Armor piece",
+    "item_armor_bp": "Armor blueprint",
+    "item_tool": "Tool",
+    "item_tool_bp": "Tool blueprint",
+    "item_drill": "Drill",
+    "item_chainsaw": "Chainsaw",
+    "item_chainsaw_bp": "Chainsaw blueprint",
+    "item_fishing_rod": "Fishing rod",
+    "item_fishing_rod_bp": "Fishing rod blueprint",
+    "item_pump": "Pump-action shotgun",
+    "item_pump_bp": "Pump-action shotgun blueprint",
+    "item_compound_bow": "Compound bow",
+    "item_compound_bow_bp": "Compound bow blueprint",
+    "item_longneck": "Longneck rifle",
+    "item_longneck_bp": "Longneck rifle blueprint",
+    "item_crossbow": "Crossbow",
+    "item_crossbow_bp": "Crossbow blueprint",
+    "item_fabricated_sniper": "Fabricated sniper rifle",
+    "item_fabricated_sniper_bp": "Fabricated sniper rifle blueprint",
+    "item_ressources": "F2 ressources",
+    
     "array_title_amount": "Amount",
     "array_title_details": "Details",
     "array_title_price": "Price"

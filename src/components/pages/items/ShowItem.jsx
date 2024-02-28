@@ -4,7 +4,7 @@ export default function ShowItem(props) {
   const { t } = useTranslation();
     return (
       <div className="flex flex-col place-items-center">
-        <div className="bg-header p-1 rounded-sm shadow-xl hover:shadow-2xl dark:shadow-wxl">
+        <div className="bg-header p-1 rounded-sm shadow-xl dark:shadow-wxl">
         <table className="text-center min-w-72">
           <thead>
             <tr className="bg-accent">
