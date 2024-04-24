@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const liClass = "active:text-secondary uppercase ease-in-out duration-300 text-xl max-sm:text-base w-20 rounded text-center text-text"
+const liClass = "active:text-secondary uppercase ease-in-out duration-300 text-xl max-sm:text-base w-20 text-center text-text"
 
 /**
  *
@@ -12,11 +12,25 @@ export default function Navbar() {
   return (
     <div>
       <ul className="grid grid-cols-5 p-2 justify-items-center bg-primary">
-        <li className={liClass}><Link to="/dinos">{t('nav_dinos')}</Link></li>
-        <li className={liClass}><Link to="/items">{t('nav_items')}</Link></li>
-        <li className={liClass}><Link to="/saddles">{t('nav_saddles')}</Link></li>
-        <li className={liClass}><Link to="/tek">{t('nav_tek')}</Link></li>
-        <li className={liClass}><Link to="/bosses">{t('nav_bosses')}</Link></li>
+        <li className={liClass}>
+          <NavLink to="/dinos" className={({ isActive }) => isActive ? 'underline' : ''}>{t('nav_dinos')}</NavLink>
+        </li>
+        <li className={liClass}>
+          <NavLink to="/items" className={({ isActive }) => isActive ? 'underline' : ''}>{t('nav_items')}
+          </NavLink>
+        </li>
+        <li className={liClass}>
+          <NavLink to="/saddles" className={({ isActive }) => isActive ? 'underline' : ''}>{t('nav_saddles')}
+          </NavLink>
+        </li>
+        <li className={liClass}>
+          <NavLink to="/tek" className={({ isActive }) => isActive ? 'underline' : ''}>{t('nav_tek')}
+          </NavLink>
+        </li>
+        <li className={liClass}>
+          <NavLink to="/bosses" className={({ isActive }) => isActive ? 'underline' : ''}>{t('nav_bosses')}
+          </NavLink>
+        </li>
       </ul>
     </div>
   );
