@@ -15,6 +15,7 @@ export default function Navbar() {
         <li className={liClass}>
           <NavLink to="/dinos" className={({ isActive }) => isActive ? 'underline' : ''}>{t('nav_dinos')}</NavLink>
         </li>
+
         <li className={liClass}>
           <NavLink to="/items" className={({ isActive }) => isActive ? 'underline' : ''}>{t('nav_items')}
           </NavLink>

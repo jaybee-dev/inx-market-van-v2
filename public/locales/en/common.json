@@ -39,6 +39,9 @@
     "stat_charge": "Charge Capacity",
     "stat_useful": "Most useful stat",
 
+    "stat_armor": "armor",
+    "stat_dura": "durability",
+
     "name_amar": "Amargasaurus",
     "name_andrew": "Andrewsarchus",
     "name_ankylo": "Ankylosaurus",

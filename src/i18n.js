@@ -1,21 +1,26 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import LanguageDetector from 'i18next-browser-languagedetector';
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
 import HttpApi from 'i18next-http-backend';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
-  .use(LanguageDetector)
   .use(HttpApi)
+  .use(LanguageDetector)
+  .use(initReactI18next)
   .init({
-    ns: ['common', 'dinos'],
-    supportedLngs : ['en', 'fr'],
-    fallbackLng: "en",
+    ns: ['common'],
+    supportedLngs: ['en', 'fr'],
+    fallbackLng: 'en',
     detection: {
-      order: ['cookie', 'htmlTag', 'localStorage', 'path', 'subdomain'],
+      order: ['path', 'cookie', 'htmlTag'],
       caches: ['cookie'],
     },
     backend: {
-      loadPath: './assets/locales/{{lng}}/translation.json', // change homepage line in package.json ; leave blank for local test/use
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
+    },
+    react: {
+      useSuspense: false,
     },
   });
+
+export default i18n;

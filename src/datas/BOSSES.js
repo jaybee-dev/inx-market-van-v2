@@ -1,5 +1,3 @@
-// import broodmother from '../assets/images/bosses/boss_broodmother.webp'
-
 export const BOSSES = [
 
 	{

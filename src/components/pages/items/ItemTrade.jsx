@@ -16,7 +16,7 @@ export default function ItemTrade() {
       <Pannel 
         title={t('pannel_title_items')}
         infos={t('pannel_info_items')}/>
-      <div className="">
+      <div >
         <Select
             data={ITEMS}
             selectName={t('choose_item')}
@@ -27,16 +27,13 @@ export default function ItemTrade() {
         />
         {ITEMS.map((item) =>
           activeName === item.name ? (
-            <div key={item.id}>
-              <div>
                 <ShowItem
+                  key={item.id}
                   name={item.name}
                   amount={item.amount}
                   details={item.details}
                   price={item.price}
                 />
-              </div>
-            </div>
           ) : null
         )}
       </div>

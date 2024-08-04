@@ -1,4 +1,5 @@
 import Select from "../../forms/Select.jsx";
+import { useTranslation } from "react-i18next";
 
 import { SADDLES } from "../../../datas/SADDLES.js";
 
@@ -9,15 +10,17 @@ import Pannel from "../../Pannel.jsx";
 export default function SaddleTrade() {
   const [activeName, setActiveName] = useState("");
 
+  const { t } = useTranslation()
+
   return (
     <div className="">
-    <Pannel 
-      title='saddle trading'
-      infos=''/>
+      <Pannel 
+        title={t('pannel_title_saddles')}
+        infos={t('pannel_info_saddles')}/>
       <div className="">
         <Select
             data={SADDLES}
-            selectName='Choose saddle'
+            selectName={t('choose_saddle')}
             activeName={activeName}
             onChange={(e) => {
                 setActiveName(e.target.value);

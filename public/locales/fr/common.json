@@ -18,7 +18,6 @@
   "pannel_title_bosses": "COMMERCE DE BOSS",
   "pannel_info_bosses" : "Choisissez un boss pour afficher le prix",
 
-
   "unique_price": "Prix unique",
 
   "dinoitem_category": "Catégorie",
@@ -39,6 +38,9 @@
   "stat_oxy": "Oxygène",
   "stat_charge": "Capacité de Charge",
   "stat_useful": "Stat la plus utile",
+
+  "stat_armor": "armure",
+  "stat_dura": "durabilité",
 
   "name_amar": "Amargasaurus",
   "name_andrew": "Andrewsarchus",

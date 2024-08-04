@@ -1,17 +1,45 @@
 export const ITEMS = [
 
 	{
-        id: 'item_armor',
+        id: Math.random(),
         name: 'item_armor',
         amount: 1,
         details: [
-                {id:'d1',detail:'+200 🛡 / +400 ⚡'},
-                {id:'d2',detail:'+300 🛡 / +600 ⚡'},
-                {id:'d3',detail:'+400 🛡 / +800 ⚡'},
-                {id:'d4',detail:'+500 🛡 / +1000 ⚡'},
-                {id:'d5',detail:'+600 🛡 / +1200 ⚡'},
-                {id:'d6',detail:'+700 🛡 / +1400 ⚡'},
-                {id:'d7',detail:'+800 🛡 / +1600 ⚡'},
+                {id:'d1',lines: [
+                        {id:1,n:'+200 ',stat:'stat_armor'},
+                        {id:2,n:'+400 ',stat:'stat_dura'}
+                        ],
+                },
+                {id:'d2',lines:[
+                        {id:1,n:'+300 ',stat:'stat_armor'},
+                        {id:2,n:'+600 ',stat:'stat_dura'}
+                        ]
+                },
+                {id:'d3',lines: [
+                        {id:1,n:'+400 ',stat:'stat_armor'},
+                        {id:2,n:'+800 ',stat:'stat_dura'}
+                        ],
+                },
+                {id:'d4',lines:[
+                        {id:1,n:'+500 ',stat:'stat_armor'},
+                        {id:2,n:'+1000 ',stat:'stat_dura'}
+                        ]
+                },
+                {id:'d5',lines: [
+                        {id:1,n:'+600 ',stat:'stat_armor'},
+                        {id:2,n:'+1200 ',stat:'stat_dura'}
+                        ],
+                },
+                {id:'d6',lines:[
+                        {id:1,n:'+700 ',stat:'stat_armor'},
+                        {id:2,n:'+1400 ',stat:'stat_dura'}
+                        ]
+                },
+                {id:'d7',lines: [
+                        {id:1,n:'+800 ',stat:'stat_armor'},
+                        {id:2,n:'+1600 ',stat:'stat_dura'}
+                        ],
+                },
                 ],
         price: [
                 {id:'p1',price:300},
